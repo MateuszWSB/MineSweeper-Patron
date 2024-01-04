@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Cell : MonoBehaviour
+public struct Cell
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Type
     {
-        
+        Empty,
+        Mine,
+        Number,
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Vector3Int position;
+    public Type type;
+    public int number;
+    public bool revealed;
+    public bool flagged;
+    public bool exploded;
+
 }
